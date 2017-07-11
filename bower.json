@@ -1,0 +1,20 @@
+{
+  "name": "todolist",
+  "description": "Small description for todolist goes here",
+  "main": "",
+  "authors": [
+    "gauchannelam <gauchanneelam@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "^2.18.1"
+  }
+}

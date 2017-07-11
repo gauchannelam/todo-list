@@ -5,6 +5,14 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'todolist',
     environment,
+    firebase: {
+        apiKey: "AIzaSyBQQUk3wOG1s0iiQMBAwYcvvm_v-42mXeo",
+        authDomain: "todolist-e0e88.firebaseapp.com",
+        databaseURL: "https://todolist-e0e88.firebaseio.com",
+        projectId: "todolist-e0e88",
+        storageBucket: "todolist-e0e88.appspot.com",
+        messagingSenderId: "932406065015"
+    },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
