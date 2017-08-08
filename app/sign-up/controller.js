@@ -7,7 +7,12 @@ firebaseApp: Ember.inject.service(),
     signUp(email, pass) {
     const fb = this.get('firebaseApp');
     fb.auth().createUserWithEmailAndPassword(email, pass).then((userResponse) => {
-    this.transitionToRoute('sign-in')
+        var user = this.store.createRecord('user',{
+          email: email,
+          password: pass,
+        });
+    user.save();
+    this.transitionToRoute('todos')
 });
 }
   }

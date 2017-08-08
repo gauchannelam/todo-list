@@ -14,8 +14,8 @@ Router.map(function() {
   this.route('sign-up');
   this.route('sign-in');
   this.route('welcome');
-  // this.authenticatedRoute('welcome');
   this.route('not-found', { path: '/*path' });
+  this.route('user');
 });
 
 export default Router;
