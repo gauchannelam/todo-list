@@ -13,6 +13,9 @@ module.exports = function(environment) {
         storageBucket: "todolist-e0e88.appspot.com",
         messagingSenderId: "932406065015"
     },
+    torii: {
+      sessionServiceName: 'session'
+    },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {

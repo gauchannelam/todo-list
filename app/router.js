@@ -11,6 +11,11 @@ Router.map(function() {
     this.route('new');
     this.route('edit',{path:'/edit/:todo_id'});
   });
+  this.route('sign-up');
+  this.route('sign-in');
+  this.route('welcome');
+  // this.authenticatedRoute('welcome');
+  this.route('not-found', { path: '/*path' });
 });
 
 export default Router;
