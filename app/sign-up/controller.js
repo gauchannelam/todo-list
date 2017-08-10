@@ -12,7 +12,7 @@ firebaseApp: Ember.inject.service(),
           password: pass,
         });
     user.save();
-    this.transitionToRoute('todos')
+    this.transitionToRoute('todos',{ queryParams: { userID: userID }})
 });
 }
   }
