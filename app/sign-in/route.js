@@ -12,4 +12,16 @@ export default Ember.Route.extend({
    // this.controller.set('userId',userID)
    // console.log('signin',userID);
  },
+ actions: {
+     signinGoogle(){
+         // var route = this,
+            let controller = this.controllerFor('sign-in');
+         // // The provider name is passed to `open`
+         this.get('session').open('google').then(()=>{
+           this.transitionToRoute('todos');
+         }, function(error){
+         //   controller.set('error', 'Could not sign you in: '+error.message);
+         });
+     }
+ }
 });

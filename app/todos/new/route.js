@@ -8,7 +8,7 @@ export default Ember.Route.extend({
       var title = controller.get('title');
       var body = controller.get('body');
       var date = controller.get('date');
-      let userID = _this.controllerFor('application').get('userID')
+      const userID = this.get('session').get('uid');
       console.log('userID',userID);
       var newtodo = _this.store.createRecord('todo',{
         title: title,

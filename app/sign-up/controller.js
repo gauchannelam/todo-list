@@ -2,6 +2,7 @@ import Ember from 'ember';
 import firebase from 'firebase';
 export default Ember.Controller.extend({
 firebaseApp: Ember.inject.service(),
+session: Ember.inject.service('session'),
 
   actions: {
     signUp(email, pass) {
@@ -12,8 +13,14 @@ firebaseApp: Ember.inject.service(),
           password: pass,
         });
     user.save();
-    this.transitionToRoute('todos',{ queryParams: { userID: userID }})
+    const userID = this.get('session').get('uid');
+    console.log('userID',userID);
+    // this.transitionToRoute('sign-in')
 });
+},
+signupGoogle(){
+    var provider = new firebase.auth.GoogleAuthProvider();
+
 }
   }
 });

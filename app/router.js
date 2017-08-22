@@ -16,6 +16,7 @@ Router.map(function() {
   this.route('welcome');
   this.route('not-found', { path: '/*path' });
   this.route('user');
+  this.route('forgot-password');
 });
 
 export default Router;

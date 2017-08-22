@@ -15,13 +15,12 @@ export default Ember.Controller.extend({
         }).then(() => {
           controller.set('email', null);
           controller.set('password', null);
-          console.log('asdf');
           const userID = this.get('session').get('uid');
+          console.log('userID',userID);
           this.transitionToRoute('todos',{ queryParams: { userID: userID }})
         }, (error) => {
           console.log(error);
         });
-      }
     }
-
+    }
 });
